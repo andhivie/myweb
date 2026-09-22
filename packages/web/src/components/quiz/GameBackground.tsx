@@ -1,19 +1,20 @@
-import defaultBackground from "@razzia/web/assets/background.png"
-import { getBranding, imageFallback } from "@razzia/web/branding"
+/**
+ * GameBackground — pola latar untuk halaman di dalam game (Lobby, Question, Result).
+ *
+ * Menggunakan pola geometris yang sama dengan halaman login (Background.tsx)
+ * supaya seluruh aplikasi terasa konsisten.
+ *
+ * Ringan: cuma CSS, tidak ada file gambar. Cocok untuk Chromebook & HP
+ * spek menengah (sesuai PDF Bagian 5: "Optimasi aset + lazy loading").
+ */
+const GameBackground = () => (
+  <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    {/* Diagonal crimson shape — kiri atas */}
+    <div className="bg-primary/20 absolute top-[-70vmin] left-[-50vmin] min-h-[120vmin] min-w-[120vmin] rotate-20 rounded-4xl" />
 
-const GameBackground = () => {
-  const background = getBranding()?.background ?? defaultBackground
+    {/* Diagonal crimson shape — kanan bawah */}
+    <div className="bg-primary/20 absolute right-[-10vmin] bottom-[-45vmin] min-h-[75vmin] min-w-[75vmin] rotate-20 rounded-4xl" />
+  </div>
+);
 
-  return (
-    <div className="fixed top-0 left-0 h-full w-full">
-      <img
-        className="pointer-events-none h-full w-full object-cover select-none"
-        src={background}
-        onError={imageFallback(defaultBackground)}
-        alt="background"
-      />
-    </div>
-  )
-}
-
-export default GameBackground
+export default GameBackground;

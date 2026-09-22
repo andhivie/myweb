@@ -1,2 +1,2 @@
 export { default, RiveAvatar } from "./RiveAvatar";
-export type { AvatarState } from "./RiveAvatar";
+export type { AvatarSize, AvatarState } from "./RiveAvatar";

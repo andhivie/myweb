@@ -3,7 +3,8 @@ import type {
   GameResult,
   GameUpdateQuestion,
   Player,
-  QuizzWithId,
+  PublicPlayer,
+  QuizzWithId
 } from "@razzia/common/types/game"
 import type { Status, StatusDataMap } from "@razzia/common/types/game/status"
 import type { ManagerConfig } from "@razzia/common/types/manager"
@@ -39,6 +40,7 @@ export interface ServerToClientEvents {
   [EVENTS.GAME.SUCCESS_ROOM]: (_data: string) => void
   [EVENTS.GAME.SUCCESS_JOIN]: (_gameId: string) => void
   [EVENTS.GAME.TOTAL_PLAYERS]: (_count: number) => void
+  [EVENTS.GAME.PLAYER_LIST]: (_players: PublicPlayer[]) => void
   [EVENTS.GAME.ERROR_MESSAGE]: (_message: string) => void
   [EVENTS.GAME.START_COOLDOWN]: () => void
   [EVENTS.GAME.COOLDOWN]: (_count: number) => void
@@ -125,6 +127,7 @@ export interface ClientToServerEvents {
   [EVENTS.PLAYER.SELECTED_ANSWER]: (
     _message: MessageWithoutStatus<{ answerKeys: number[] }>,
   ) => void
+  [EVENTS.PLAYER.REQUEST_LIST]: () => void
 
   // Results actions
   [EVENTS.RESULTS.GET]: (_id: string) => void

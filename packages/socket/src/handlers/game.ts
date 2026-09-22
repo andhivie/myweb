@@ -123,6 +123,14 @@ export const gameSocketHandlers = ({ io, socket }: SocketContext) => {
     withGame(gameId, socket, (game) => game.join(socket, data.username)),
   )
 
+  socket.on(EVENTS.PLAYER.REQUEST_LIST, () => {
+    const game = registry.getGameByPlayerSocketId(socket.id)
+
+    if (game) {
+      game.sendPlayerList(socket)
+    }
+  })
+
   socket.on(EVENTS.MANAGER.KICK_PLAYER, ({ gameId, playerId }) =>
     withGame(gameId, socket, (game) => game.kickPlayer(socket, playerId)),
   )

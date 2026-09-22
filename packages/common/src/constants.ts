@@ -4,6 +4,7 @@ export const EVENTS = {
     SUCCESS_ROOM: "game:successRoom",
     SUCCESS_JOIN: "game:successJoin",
     TOTAL_PLAYERS: "game:totalPlayers",
+    PLAYER_LIST: "game:playerList",
     ERROR_MESSAGE: "game:errorMessage",
     START_COOLDOWN: "game:startCooldown",
     COOLDOWN: "game:cooldown",
@@ -22,6 +23,7 @@ export const EVENTS = {
     SELECTED_ANSWER: "player:selectedAnswer",
     CHECK_PIN: "player:checkPin",
     CHECK_PIN_RESULT: "player:checkPinResult",
+    REQUEST_LIST: "player:requestList",
   },
   MANAGER: {
     SUCCESS_RECONNECT: "manager:successReconnect",

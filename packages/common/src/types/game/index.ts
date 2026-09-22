@@ -23,6 +23,18 @@ export interface Player {
   streak: number
 }
 
+/**
+ * Public-facing player info — TANPA clientId.
+ * clientId adalah credential untuk reconnect, tidak boleh bocor ke client lain.
+ */
+export interface PublicPlayer {
+  id: string
+  username: string
+  points: number
+  streak: number
+  connected: boolean
+}
+
 export interface Answer {
   playerId: string
   answerIds: number[]

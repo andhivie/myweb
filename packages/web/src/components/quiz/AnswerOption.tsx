@@ -70,11 +70,10 @@ const AnswerOption = ({
   state = "default",
   compact = false,
   disabled,
+  style: externalStyle,
   ...otherProps
 }: Props) => {
   const bg = ANSWER_BG[index];
-
-  // Warna latar + filter sesuai state
   const isWrong = state === "wrong";
   const isCorrect = state === "correct";
   const isDimmed = state === "dimmed";
@@ -88,20 +87,20 @@ const AnswerOption = ({
         "active:scale-[0.98]",
         "disabled:cursor-not-allowed",
         compact ? "px-3 py-2" : "px-4 py-5",
-        // Border & shadow per state
         isCorrect &&
           "border-white shadow-[0_0_0_4px_rgba(16,185,129,0.35),0_8px_24px_rgba(16,185,129,0.25)]",
         state === "selected" &&
           "border-white shadow-[0_0_0_4px_rgba(255,255,255,0.18)]",
         (state === "default" || isDimmed || isWrong) && "border-transparent",
-        // Hover
         !disabled && state === "default" && "hover:brightness-110",
         !disabled && state === "selected" && "hover:brightness-110",
         className,
       )}
       style={{
+        // External style (animation) dulu
+        ...externalStyle,
+        // Internal style WAJIB ada setelah, supaya warna tidak tertimpa
         backgroundColor: bg,
-        // Wrong → desaturasi + gelapkan (tapi teks tetap putih terbaca)
         filter: isWrong ? "saturate(0.15) brightness(0.65)" : undefined,
         opacity: isDimmed ? 0.45 : 1,
       }}

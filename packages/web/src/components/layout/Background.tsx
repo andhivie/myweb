@@ -10,16 +10,17 @@ const Background = ({ children }: PropsWithChildren) => {
 
   return (
     <section className="relative flex min-h-dvh flex-col items-center justify-center">
-      <div className="pointer-events-none absolute h-full max-h-svh w-full overflow-hidden">
+      {/* Pola latar — sama dengan GameBackground, konsisten di seluruh app */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="bg-primary/15 absolute top-[-70vmin] left-[-50vmin] min-h-[120vmin] min-w-[120vmin] rotate-20 rounded-4xl" />
         <div className="bg-primary/15 absolute right-[-10vmin] bottom-[-45vmin] min-h-[75vmin] min-w-[75vmin] rotate-20 rounded-4xl" />
       </div>
 
       <img
-      src={logo}
-      onError={imageFallback(defaultLogo)}
-      className="-mb-2 h-auto w-auto max-h-44 max-w-[min(90vw,560px)] object-contain"
-      alt={appName}
+        src={logo}
+        onError={imageFallback(defaultLogo)}
+        className="-mb-2 h-auto w-auto max-h-44 max-w-[min(90vw,560px)] object-contain"
+        alt={appName}
       />
       {children}
 

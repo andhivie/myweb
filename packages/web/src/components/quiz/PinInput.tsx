@@ -9,15 +9,24 @@ import {
 interface Props {
   value: string;
   onChange: (_value: string) => void;
+  /** Dipanggil saat user menekan Enter dan PIN sudah lengkap */
+  onEnter?: () => void;
   length?: number;
   className?: string;
 }
 
-const PinInput = ({ value, onChange, length = 6, className }: Props) => {
+const PinInput = ({
+  value,
+  onChange,
+  onEnter,
+  length = 6,
+  className,
+}: Props) => {
   const refs = useRef<Array<HTMLInputElement | null>>([]);
 
   const padded = value.padEnd(length, " ").slice(0, length);
   const digits = Array.from({ length }, (_, i) => padded[i].trim());
+  const isComplete = value.replace(/\s/gu, "").length === length;
 
   const focus = (index: number) => {
     refs.current[Math.max(0, Math.min(length - 1, index))]?.focus();
@@ -31,6 +40,13 @@ const PinInput = ({ value, onChange, length = 6, className }: Props) => {
 
   const handleKeyDown =
     (index: number) => (e: KeyboardEvent<HTMLInputElement>) => {
+      // Enter — submit kalau lengkap
+      if (e.key === "Enter" && isComplete) {
+        e.preventDefault();
+        onEnter?.();
+        return;
+      }
+
       if (e.key === "Backspace") {
         e.preventDefault();
 
@@ -45,11 +61,18 @@ const PinInput = ({ value, onChange, length = 6, className }: Props) => {
 
       if (e.key === "ArrowLeft") {
         focus(index - 1);
-
         return;
       }
 
       if (e.key === "ArrowRight") {
+        focus(index + 1);
+        return;
+      }
+
+      // Angka → isi dan auto-advance
+      if (/^\d$/u.test(e.key)) {
+        e.preventDefault();
+        update(index, e.key);
         focus(index + 1);
       }
     };

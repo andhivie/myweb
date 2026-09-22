@@ -176,7 +176,7 @@ class Game {
       status,
       players: this.playerManager.getAll(),
     })
-    socket.emit(EVENTS.GAME.TOTAL_PLAYERS, this.playerManager.count())
+    this.playerManager.broadcastCount();
 
     registry.reactivateGame(this.gameId)
     console.log(`Manager reconnected to game ${this.inviteCode}`)
@@ -274,6 +274,10 @@ class Game {
 
   showLeaderboard(socket: Socket) {
     this.round.showLeaderboard(socket)
+  }
+/** Kirim daftar pemain + jumlah ke satu socket tertentu (untuk Lobby). */
+sendPlayerList(socket: Socket) {
+  this.playerManager.sendTo(socket)
   }
 }
 
