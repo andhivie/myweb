@@ -2,141 +2,96 @@
   <img width="450" height="120" align="center" src=".github/logo.svg">
   <br>
   <div align="center">
-    <img alt="Visitor Badge" src="https://api.visitorbadge.io/api/visitors?path=https://github.com/Ralex91/Razzia/edit/main/README.md&countColor=%23FF9900">
-    <img src="https://img.shields.io/docker/pulls/ralex91/razzia?style=for-the-badge&color=FF9900" alt="Docker Pulls">
+    <img alt="Status" src="https://img.shields.io/badge/status-under%20development-E11D48?style=for-the-badge">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-D4A883?style=for-the-badge">
   </div>
 </p>
 
-## 🧩 What is this project?
+## 🧩 What is Andhivie?
 
-Razzia is a straightforward and open-source quiz platform, allowing users to host it on their own server for smaller events.
+**Andhivie** is a self-hosted, interactive quiz and learning platform designed for education — from elementary school through college — and comfortable for training, events, and community learning.
 
-> **Disclaimer**: Razzia is an independent, open-source software project. It is not affiliated with, endorsed by, or sponsored by any third-party quiz platform or service. Any resemblance to other quiz platforms is purely incidental.
+Built with an **elegant dark** aesthetic, Andhivie combines the energy of live quiz games with the flexibility of self-paced learning and team-based competition. It gives teachers rich authoring tools, real-time insight into student progress, and delightful experiences for learners through reactive avatars.
 
-<p align="center">
-  <img width="30%" src=".github/previews/1.png" alt="Login">
-  <img width="30%" src=".github/previews/2.png" alt="Manager Room">
-  <img width="30%" src=".github/previews/3.png" alt="Question Screen">
-</p>
+> **Status:** Active development. Core flows (join, lobby, live quiz, results) are functional. Advanced features (student-paced mode, team mode, anti-cheating) are in progress.
 
-## ⚙️ Prerequisites
+## ✨ Vision
 
-Choose one of the following deployment methods:
+To be the **premium-feeling** self-hosted learning platform — easy for teachers, joyful for students, and useful for real classroom decisions.
 
-### Without Docker
+## 🎯 Planned Features
 
-- Node.js : version 24 or higher
-- PNPM : version 10.16 or higher (learn more [here](https://pnpm.io/))
+### Session Modes
+- **Teacher-Led** — the host controls the pace, everyone sees the same question
+- **Student-Paced** — students advance at their own speed *(in progress)*
+- **Team Mode** — combined team scores and team leaderboards *(in progress)*
 
-### With Docker
+### Question Types
+- Multiple Choice (2–8 options)
+- Multi-Select
+- True / False
+- Fill in the Blank
+- Matching, Ordering, Hotspot *(planned)*
+- Open-ended with AI grading *(planned)*
 
-- Docker and Docker Compose
+### Authoring & Management
+- Rich Question Editor with media (image, video, audio)
+- Quiz Library with folders and tags
+- Import from Excel / Word / PDF *(planned)*
+- Export to Excel & PDF with watermark
 
-## 📖 Getting Started
+### Host Controls
+- Simple login for hosts/admins
+- Live progress dashboard
+- Per-student accommodations
+- Review mode after a quiz
+- Scheduled assignments
 
-Choose your deployment method:
+### Anti-Cheating (Moderate)
+- Tab-switch detection
+- Question & option shuffling
+- Optional force-fullscreen per session
+- Copy-paste & right-click blocking
+
+### Engagement
+- Real-time leaderboards
+- Streak reactions
+- Lightweight power-ups (Shield, 50/50, Freeze, Double Points)
+- Reactive avatar (Rive)
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 19 + TypeScript + Tailwind CSS v4 + Vite |
+| **Routing** | TanStack Router |
+| **State** | Zustand |
+| **Backend** | Node.js + Socket.IO |
+| **Validation** | Zod |
+| **Animation** | Motion + Rive |
+| **Monorepo** | pnpm workspaces |
+
+## 🎨 Brand
+
+| | |
+|---|---|
+| **Primary** | Deep Crimson `#E11D48` |
+| **Accent** | Champagne Gold `#D4A883` |
+| **Background** | Deep Charcoal `#0F0A0A` |
+| **Heading Font** | Outfit |
+| **Body Font** | Plus Jakarta Sans |
+| **UI Language** | English |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Choose one:
+
+- **Docker:** Docker + Docker Compose
+- **Manual:** Node.js 24+, pnpm 10.16+
 
 ### 🐳 Using Docker (Recommended)
 
-Using Docker Compose (recommended):
-You can find the docker compose configuration in the repository:
-[docker-compose.yml](/compose.yml)
-
 ```bash
 docker compose up -d
-```
-
-Or using Docker directly:
-
-```bash
-docker run -d \
-  -p 3000:3000 \
-  -v ./config:/app/config \
-  ralex91/razzia:latest
-```
-
-The image is also published on the GitHub Container Registry, if you prefer using it instead of Docker Hub:
-
-```bash
-docker run -d \
-  -p 3000:3000 \
-  -v ./config:/app/config \
-  ghcr.io/ralex91/razzia:latest
-```
-
-**Configuration Volume:**
-The `-v ./config:/app/config` option mounts a local `config` folder to persist your game settings and quizzes. This allows you to:
-
-- Edit your configuration files directly on your host machine
-- Keep your settings when updating the container
-- Easily backup your quizzes and game configuration
-
-The folder will be created automatically on first run with an example quiz to get you started.
-
-The application will be available at http://localhost:3000
-
-### 🛠️ Without Docker
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Ralex91/Razzia.git
-cd ./Razzia
-```
-
-2. Install dependencies:
-
-```bash
-pnpm install
-```
-
-3. Build and start the application:
-
-```bash
-# Development mode
-pnpm dev
-
-# Production mode
-pnpm build
-pnpm start
-```
-
-## ⚙️ Configuration
-
-**⚠️ Required:** set a manager password in `config/game.json` before going live.
-
-```json
-{
-  "managerPassword": "PASSWORD"
-}
-```
-
-`managerPassword` **must be changed** from the default `"PASSWORD"` value, otherwise manager access is blocked.
-
-## 📚 Documentation
-
-- [Configuration](docs/configuration.md): manager password, via the `config` folder.
-- [Quiz](docs/quiz.md): creating and structuring quizzes.
-- [Branding](docs/branding.md): optional custom theming.
-- [Reverse Proxy](docs/reverse-proxy.md): running behind Traefik, Nginx, Caddy, or another reverse proxy.
-- [WebSocket Protocol](docs/websocket-protocol.md): build a custom client (e.g. an ESP32 physical buzzer).
-
-Full index in [docs/](docs/README.md).
-
-## 🎮 How to Play
-
-1. Access the manager interface at http://localhost:3000/manager
-2. Enter the manager password (defined in `config/game.json`)
-3. Share the game URL (http://localhost:3000) and room code with participants
-4. Wait for players to join
-5. Click the start button to begin the game
-
-## 📝 Contributing
-
-Contributions are welcome! Please read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) guide before submitting a pull request.
-
-For bug reports or feature requests, please [create an issue](https://github.com/Ralex91/Razzia/issues).
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Ralex91/Razzia&type=date&logscale=&legend=bottom-right)](https://www.star-history.com/#Ralex91/Razzia&type=date&logscale=&legend=bottom-right)
