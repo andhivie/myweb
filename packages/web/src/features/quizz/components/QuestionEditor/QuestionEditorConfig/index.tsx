@@ -1,14 +1,14 @@
 import type { QuestionType } from "@razzia/common/types/game"
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@razzia/web/components/Select"
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@razzia/web/components/ui/Select"
 import {
-  QUESTION_REGISTRY,
-  QUESTION_TYPE_LIST,
+    QUESTION_REGISTRY,
+    QUESTION_TYPE_LIST,
 } from "@razzia/web/features/questions"
 import ConfigField from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
 import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"

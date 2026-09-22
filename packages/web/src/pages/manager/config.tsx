@@ -1,13 +1,13 @@
 import { EVENTS } from "@razzia/common/constants"
 import { STATUS } from "@razzia/common/types/game/status"
-import Background from "@razzia/web/components/Background"
-import Loader from "@razzia/web/components/Loader"
-import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/game/contexts/socket-context"
-import { useManagerStore } from "@razzia/web/features/game/stores/manager"
+import Background from "@razzia/web/components/layout/Background"
+import Loader from "@razzia/web/components/ui/Loader"
 import Configurations from "@razzia/web/features/manager/components/configurations"
+import {
+    useEvent,
+    useSocket,
+} from "@razzia/web/features/session/contexts/socket-context"
+import { useManagerStore } from "@razzia/web/features/session/stores/manager"
 import { createFileRoute, useNavigate } from "@tanstack/react-router"
 
 const ManagerConfigPage = () => {

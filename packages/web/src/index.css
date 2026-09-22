@@ -1,28 +1,96 @@
 @import "tailwindcss";
 
+/* ════════════════════════════════════════════════════════════
+   ANDHIVIE — DESIGN TOKENS
+   Elegant Dark + Playful Premium (Crimson + Gold)
+   Referensi: PDF Bagian 4 (Brand Identity & Design System)
+   ════════════════════════════════════════════════════════════ */
+
 @theme {
-  --color-primary: #ff9900;
-  --color-secondary: #1a140b;
-  --color-answer-1: #e69f00;
-  --color-answer-2: #56b4e9;
-  --color-answer-3: #3dbfa0;
-  --color-answer-4: #cc79a7;
+  /* ── Base Surfaces ────────────────────────────────────── */
+  --color-background: #0f0a0a;      /* Deep Charcoal — main bg */
+  --color-surface: #1c1212;         /* Cards, modals, panels */
+  --color-surface-hover: #2a1a1a;   /* Surface hover state */
 
-  --color-background: var(--color-white);
+  /* ── Brand Colors ─────────────────────────────────────── */
+  --color-primary: #e11d48;         /* Deep Crimson */
+  --color-primary-hover: #be123c;   /* Crimson hover */
+  --color-accent-gold: #d4a883;     /* Champagne Gold */
 
-  --color-muted: var(--color-gray-100);
-  --color-muted-foreground: var(--color-gray-500);
-  --color-accent: var(--color-gray-300);
-  --color-accent-foreground: var(--color-gray-600);
-  --color-foreground: var(--color-gray-700);
+  /* ── Text ──────────────────────────────────────────────── */
+  --color-foreground: #f5f0eb;      /* Main text on dark surfaces */
+  --color-muted-foreground: #b8a9a9; /* Secondary text */
 
-  --font-display: "Rubik Variable", sans-serif;
+  /* ── Borders & Muted ──────────────────────────────────── */
+  --color-muted: #2a1a1a;           /* Muted backgrounds */
+  --color-accent: #3a2a2a;          /* Borders, dividers */
+  --color-accent-foreground: #d1c4c4; /* Text on accent */
+
+  /* ── Legacy Alias (kompatibilitas sementara) ─────────── */
+  --color-secondary: #0f0a0a;       /* sama dengan background */
+
+  /* ── Answer Colors (4 pilihan jawaban) ─────────────────
+  Semua warna dirancang kontras dengan teks putih (WCAG AA)
+  ─────────────────────────────────────────────────────── */
+  --color-answer-1: #e11d48;        /* Crimson (brand primary) */
+  --color-answer-2: #d97706;        /* Amber / warm gold */
+  --color-answer-3: #7c3aed;        /* Violet */
+  --color-answer-4: #059669;        /* Emerald */
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-heading: "Outfit Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui,
+    sans-serif;
+
+  /* ── Radius (sesuai PDF: 8 / 12 / 16 / 20) ───────────── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* ── Motion Easing ────────────────────────────────────── */
+  --ease-out-andhivie: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ════════════════════════════════════════════════════════════
+   BASE STYLES
+   ════════════════════════════════════════════════════════════ */
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 button:not(:disabled),
 [role="button"]:not(:disabled) {
   cursor: pointer;
 }
+
+/* ════════════════════════════════════════════════════════════
+   ANIMATIONS
+   (dipertahankan dari Razzia — akan dipakai komponen lama
+   sampai kita refactor satu per satu di langkah berikutnya)
+   ════════════════════════════════════════════════════════════ */
 
 .spotlight {
   position: absolute;
@@ -179,5 +247,20 @@ button:not(:disabled),
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   ACCESSIBILITY — Hormati preferensi pengguna
+   (sesuai PDF: "Hormati prefers-reduced-motion")
+   ════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

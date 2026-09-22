@@ -1,13 +1,13 @@
 import { MAX_POINTS, NO_TIME_LIMIT } from "@razzia/common/constants"
 import type { ScoringMode } from "@razzia/common/types/game"
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@razzia/web/components/Select"
-import Switch from "@razzia/web/components/Switch"
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@razzia/web/components/ui/Select"
+import Switch from "@razzia/web/components/ui/Switch"
 import { QUESTION_REGISTRY } from "@razzia/web/features/questions"
 import ConfigField from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
 import ConfigNumberInput from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigNumberInput"

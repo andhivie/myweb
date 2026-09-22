@@ -1,9 +1,9 @@
-import {
-  ANSWERS_COLORS,
-  ANSWERS_LABELS,
-} from "@razzia/web/features/game/utils/constants"
 import { QUESTION_REGISTRY } from "@razzia/web/features/questions"
 import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+import {
+    ANSWERS_COLORS,
+    ANSWERS_LABELS,
+} from "@razzia/web/features/session/utils/constants"
 import clsx from "clsx"
 import { Minus, Plus } from "lucide-react"
 import { useTranslation } from "react-i18next"

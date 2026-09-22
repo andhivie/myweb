@@ -1,26 +1,26 @@
 import {
-  DndContext,
-  PointerSensor,
-  closestCenter,
-  useSensor,
-  useSensors,
-  type DragEndEvent,
+    DndContext,
+    PointerSensor,
+    closestCenter,
+    useSensor,
+    useSensors,
+    type DragEndEvent,
 } from "@dnd-kit/core"
 import {
-  restrictToFirstScrollableAncestor,
-  restrictToVerticalAxis,
+    restrictToFirstScrollableAncestor,
+    restrictToVerticalAxis,
 } from "@dnd-kit/modifiers"
 import {
-  SortableContext,
-  useSortable,
-  verticalListSortingStrategy,
+    SortableContext,
+    useSortable,
+    verticalListSortingStrategy,
 } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
-import Button from "@razzia/web/components/Button"
+import Button from "@razzia/web/components/ui/Button"
 import QuizzEditorCard from "@razzia/web/features/quizz/components/QuizzEditorCard"
 import {
-  useQuizzEditor,
-  type QuestionWithId,
+    useQuizzEditor,
+    type QuestionWithId,
 } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
 import clsx from "clsx"
 import { Plus } from "lucide-react"

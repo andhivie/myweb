@@ -13,6 +13,8 @@ import { Route as authLayoutRouteImport } from './pages/(auth)/layout'
 import { Route as authIndexRouteImport } from './pages/(auth)/index'
 import { Route as PartyGameIdRouteImport } from './pages/party/$gameId'
 import { Route as ManagerConfigRouteImport } from './pages/manager/config'
+import { Route as DevComponentsRouteImport } from './pages/dev/components'
+import { Route as DevAvatarRouteImport } from './pages/dev/avatar'
 import { Route as ManagerQuizzLayoutRouteImport } from './pages/manager/quizz/layout'
 import { Route as ManagerQuizzIndexRouteImport } from './pages/manager/quizz/index'
 import { Route as authManagerIndexRouteImport } from './pages/(auth)/manager/index'
@@ -36,6 +38,16 @@ const PartyGameIdRoute = PartyGameIdRouteImport.update({
 const ManagerConfigRoute = ManagerConfigRouteImport.update({
   id: '/manager/config',
   path: '/manager/config',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevComponentsRoute = DevComponentsRouteImport.update({
+  id: '/dev/components',
+  path: '/dev/components',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevAvatarRoute = DevAvatarRouteImport.update({
+  id: '/dev/avatar',
+  path: '/dev/avatar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ManagerQuizzLayoutRoute = ManagerQuizzLayoutRouteImport.update({
@@ -66,6 +78,8 @@ const ManagerQuizzQuizzIdRoute = ManagerQuizzQuizzIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/manager/quizz': typeof ManagerQuizzLayoutRouteWithChildren
+  '/dev/avatar': typeof DevAvatarRoute
+  '/dev/components': typeof DevComponentsRoute
   '/manager/config': typeof ManagerConfigRoute
   '/party/$gameId': typeof PartyGameIdRoute
   '/': typeof authIndexRoute
@@ -75,6 +89,8 @@ export interface FileRoutesByFullPath {
   '/manager/quizz/': typeof ManagerQuizzIndexRoute
 }
 export interface FileRoutesByTo {
+  '/dev/avatar': typeof DevAvatarRoute
+  '/dev/components': typeof DevComponentsRoute
   '/manager/config': typeof ManagerConfigRoute
   '/party/$gameId': typeof PartyGameIdRoute
   '/': typeof authIndexRoute
@@ -87,6 +103,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/(auth)': typeof authLayoutRouteWithChildren
   '/manager/quizz': typeof ManagerQuizzLayoutRouteWithChildren
+  '/dev/avatar': typeof DevAvatarRoute
+  '/dev/components': typeof DevComponentsRoute
   '/manager/config': typeof ManagerConfigRoute
   '/party/$gameId': typeof PartyGameIdRoute
   '/(auth)/': typeof authIndexRoute
@@ -99,6 +117,8 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/manager/quizz'
+    | '/dev/avatar'
+    | '/dev/components'
     | '/manager/config'
     | '/party/$gameId'
     | '/'
@@ -108,6 +128,8 @@ export interface FileRouteTypes {
     | '/manager/quizz/'
   fileRoutesByTo: FileRoutesByTo
   to:
+    | '/dev/avatar'
+    | '/dev/components'
     | '/manager/config'
     | '/party/$gameId'
     | '/'
@@ -119,6 +141,8 @@ export interface FileRouteTypes {
     | '__root__'
     | '/(auth)'
     | '/manager/quizz'
+    | '/dev/avatar'
+    | '/dev/components'
     | '/manager/config'
     | '/party/$gameId'
     | '/(auth)/'
@@ -131,6 +155,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   authLayoutRoute: typeof authLayoutRouteWithChildren
   ManagerQuizzLayoutRoute: typeof ManagerQuizzLayoutRouteWithChildren
+  DevAvatarRoute: typeof DevAvatarRoute
+  DevComponentsRoute: typeof DevComponentsRoute
   ManagerConfigRoute: typeof ManagerConfigRoute
   PartyGameIdRoute: typeof PartyGameIdRoute
   PartyManagerGameIdRoute: typeof PartyManagerGameIdRoute
@@ -164,6 +190,20 @@ declare module '@tanstack/react-router' {
       path: '/manager/config'
       fullPath: '/manager/config'
       preLoaderRoute: typeof ManagerConfigRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dev/components': {
+      id: '/dev/components'
+      path: '/dev/components'
+      fullPath: '/dev/components'
+      preLoaderRoute: typeof DevComponentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dev/avatar': {
+      id: '/dev/avatar'
+      path: '/dev/avatar'
+      fullPath: '/dev/avatar'
+      preLoaderRoute: typeof DevAvatarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/manager/quizz': {
@@ -234,6 +274,8 @@ const ManagerQuizzLayoutRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   authLayoutRoute: authLayoutRouteWithChildren,
   ManagerQuizzLayoutRoute: ManagerQuizzLayoutRouteWithChildren,
+  DevAvatarRoute: DevAvatarRoute,
+  DevComponentsRoute: DevComponentsRoute,
   ManagerConfigRoute: ManagerConfigRoute,
   PartyGameIdRoute: PartyGameIdRoute,
   PartyManagerGameIdRoute: PartyManagerGameIdRoute,

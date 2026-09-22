@@ -1,35 +1,35 @@
-import ErrorPage from "@razzia/web/components/ErrorPage"
-import NotFound from "@razzia/web/components/NotFound"
+import ErrorPage from "@razzia/web/components/layout/ErrorPage";
+import NotFound from "@razzia/web/components/layout/NotFound";
 import {
   SocketProvider,
   useSocket,
-} from "@razzia/web/features/game/contexts/socket-context"
-import { createRootRoute, Outlet } from "@tanstack/react-router"
-import { useEffect } from "react"
+} from "@razzia/web/features/session/contexts/socket-context";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 const GameLayout = () => {
-  const { isConnected, connect } = useSocket()
+  const { isConnected, connect } = useSocket();
 
   useEffect(() => {
     if (!isConnected) {
-      connect()
+      connect();
     }
-  }, [connect, isConnected])
+  }, [connect, isConnected]);
 
   useEffect(() => {
-    document.body.classList.add("bg-secondary")
+    document.body.classList.add("bg-secondary");
 
     return () => {
-      document.body.classList.remove("bg-secondary")
-    }
-  }, [])
+      document.body.classList.remove("bg-secondary");
+    };
+  }, []);
 
   return (
     <div className="bg-secondary antialiased">
       <Outlet />
     </div>
-  )
-}
+  );
+};
 
 export const Route = createRootRoute({
   component: () => (
@@ -47,4 +47,4 @@ export const Route = createRootRoute({
       <NotFound />
     </div>
   ),
-})
+});

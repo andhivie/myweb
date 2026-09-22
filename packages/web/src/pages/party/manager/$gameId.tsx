@@ -1,18 +1,18 @@
 import { EVENTS } from "@razzia/common/constants"
 import { STATUS } from "@razzia/common/types/game/status"
-import GameWrapper from "@razzia/web/features/game/components/GameWrapper"
+import GameWrapper from "@razzia/web/features/session/components/GameWrapper"
 import {
-  socketClient,
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/game/contexts/socket-context"
-import { useManagerStore } from "@razzia/web/features/game/stores/manager"
-import { useQuestionStore } from "@razzia/web/features/game/stores/question"
+    socketClient,
+    useEvent,
+    useSocket,
+} from "@razzia/web/features/session/contexts/socket-context"
+import { useManagerStore } from "@razzia/web/features/session/stores/manager"
+import { useQuestionStore } from "@razzia/web/features/session/stores/question"
 import {
-  GAME_STATE_COMPONENTS_MANAGER,
-  MANAGER_SKIP_EVENTS,
-  isKeyOf,
-} from "@razzia/web/features/game/utils/constants"
+    GAME_STATE_COMPONENTS_MANAGER,
+    MANAGER_SKIP_EVENTS,
+    isKeyOf,
+} from "@razzia/web/features/session/utils/constants"
 import { createFileRoute, useNavigate, useParams } from "@tanstack/react-router"
 import toast from "react-hot-toast"
 import { useTranslation } from "react-i18next"

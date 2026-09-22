@@ -1,6 +1,6 @@
 import { MEDIA_TYPES } from "@razzia/common/constants"
 import type { QuestionMedia } from "@razzia/common/types/game"
-import AlertDialog from "@razzia/web/components/AlertDialog"
+import AlertDialog from "@razzia/web/components/ui/AlertDialog"
 import { type QuestionWithId } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
 import clsx from "clsx"
 import { Music, Trash2, Video } from "lucide-react"
