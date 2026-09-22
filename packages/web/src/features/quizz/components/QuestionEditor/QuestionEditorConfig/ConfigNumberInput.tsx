@@ -1,4 +1,4 @@
-import Input from "@razzia/web/components/ui/Input"
+import Input from "@andhivie/web/components/ui/Input"
 import { useEffect, useState } from "react"
 
 interface Props {

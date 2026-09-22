@@ -1,6 +1,6 @@
-import type { ManagerStatusDataMap } from "@razzia/common/types/game/status";
-import { SFX } from "@razzia/web/features/session/utils/constants";
-import useScreenSize from "@razzia/web/lib/hooks/useScreenSize";
+import type { ManagerStatusDataMap } from "@andhivie/common/types/game/status";
+import { SFX } from "@andhivie/web/features/session/utils/constants";
+import useScreenSize from "@andhivie/web/lib/hooks/useScreenSize";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import ReactConfetti from "react-confetti";

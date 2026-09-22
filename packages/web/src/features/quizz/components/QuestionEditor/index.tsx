@@ -1,8 +1,8 @@
-import GameBackground from "@razzia/web/components/quiz/GameBackground"
-import QuestionEditorAnswers from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorAnswers"
-import QuestionEditorConfig from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig"
-import QuestionEditorMedia from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorMedia"
-import QuestionEditorTitle from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorTitle"
+import GameBackground from "@andhivie/web/components/quiz/GameBackground"
+import QuestionEditorAnswers from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorAnswers"
+import QuestionEditorConfig from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorConfig"
+import QuestionEditorMedia from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorMedia"
+import QuestionEditorTitle from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorTitle"
 
 const QuestionEditor = () => (
   <div className="flex flex-1 overflow-hidden">

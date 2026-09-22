@@ -1,8 +1,8 @@
-import { EVENTS } from "@razzia/common/constants";
-import type { Player, PublicPlayer } from "@razzia/common/types/game";
-import type { Server, Socket } from "@razzia/common/types/game/socket";
-import { usernameValidator } from "@razzia/common/validators/auth";
-import { getClientId } from "@razzia/socket/utils/socket";
+import { EVENTS } from "@andhivie/common/constants";
+import type { Player, PublicPlayer } from "@andhivie/common/types/game";
+import type { Server, Socket } from "@andhivie/common/types/game/socket";
+import { usernameValidator } from "@andhivie/common/validators/auth";
+import { getClientId } from "@andhivie/socket/utils/socket";
 
 const toPublicPlayer = (p: Player): PublicPlayer => ({
   id: p.id,

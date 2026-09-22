@@ -1,5 +1,5 @@
+import Button from "@andhivie/web/components/ui/Button";
 import * as RadixAlertDialog from "@radix-ui/react-alert-dialog";
-import Button from "@razzia/web/components/ui/Button";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 

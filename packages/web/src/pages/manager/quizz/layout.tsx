@@ -1,10 +1,10 @@
-import { EVENTS } from "@razzia/common/constants"
-import Loader from "@razzia/web/components/ui/Loader"
+import { EVENTS } from "@andhivie/common/constants"
+import Loader from "@andhivie/web/components/ui/Loader"
 import {
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
-import { useManagerStore } from "@razzia/web/features/session/stores/manager"
+} from "@andhivie/web/features/session/contexts/socket-context"
+import { useManagerStore } from "@andhivie/web/features/session/stores/manager"
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/react-router"
 import { useEffect } from "react"
 

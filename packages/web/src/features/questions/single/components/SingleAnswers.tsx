@@ -1,5 +1,5 @@
-import { AnswerOption } from "@razzia/web/components/quiz";
-import type { AnswerComponentProps } from "@razzia/web/features/questions/types";
+import { AnswerOption } from "@andhivie/web/components/quiz";
+import type { AnswerComponentProps } from "@andhivie/web/features/questions/types";
 import clsx from "clsx";
 
 const LABELS = ["A", "B", "C", "D"] as const;

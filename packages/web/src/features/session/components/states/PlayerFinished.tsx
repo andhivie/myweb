@@ -1,5 +1,5 @@
-import type { CommonStatusDataMap } from "@razzia/common/types/game/status";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
+import type { CommonStatusDataMap } from "@andhivie/common/types/game/status";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";

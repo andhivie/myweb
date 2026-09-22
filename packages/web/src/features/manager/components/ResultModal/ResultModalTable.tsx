@@ -1,8 +1,8 @@
-import { useResultModal } from "@razzia/web/features/manager/contexts/result-modal-context"
+import { useResultModal } from "@andhivie/web/features/manager/contexts/result-modal-context"
 import {
     ANSWERS_COLORS,
     ANSWERS_LABELS,
-} from "@razzia/web/features/session/utils/constants"
+} from "@andhivie/web/features/session/utils/constants"
 import clsx from "clsx"
 import { Check, X } from "lucide-react"
 import { useTranslation } from "react-i18next"

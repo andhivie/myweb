@@ -1,11 +1,11 @@
-import Reconnect from "@razzia/web/features/session/components/join/Reconnect"
-import Room from "@razzia/web/features/session/components/join/Room"
-import Username from "@razzia/web/features/session/components/join/Username"
+import Reconnect from "@andhivie/web/features/session/components/join/Reconnect"
+import Room from "@andhivie/web/features/session/components/join/Room"
+import Username from "@andhivie/web/features/session/components/join/Username"
 import {
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
-import { usePlayerStore } from "@razzia/web/features/session/stores/player"
+} from "@andhivie/web/features/session/contexts/socket-context"
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player"
 import { createFileRoute } from "@tanstack/react-router"
 import { useEffect } from "react"
 import toast from "react-hot-toast"

@@ -1,9 +1,9 @@
-import type { ManagerStatusDataMap } from "@razzia/common/types/game/status";
+import type { ManagerStatusDataMap } from "@andhivie/common/types/game/status";
 import {
-  ANSWERS_COLORS,
-  ANSWERS_LABELS,
-  SFX,
-} from "@razzia/web/features/session/utils/constants";
+    ANSWERS_COLORS,
+    ANSWERS_LABELS,
+    SFX,
+} from "@andhivie/web/features/session/utils/constants";
 import clsx from "clsx";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";

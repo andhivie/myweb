@@ -1,9 +1,9 @@
 import type {
-  Player,
-  QuestionMedia,
-  QuestionOptions,
-  QuestionType,
-} from "@razzia/common/types/game"
+    Player,
+    QuestionMedia,
+    QuestionOptions,
+    QuestionType,
+} from "@andhivie/common/types/game";
 
 export const STATUS = {
   SHOW_ROOM: "SHOW_ROOM",

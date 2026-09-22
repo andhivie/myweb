@@ -1,12 +1,12 @@
-import { EVENTS } from "@razzia/common/constants"
-import type { SocketContext } from "@razzia/socket/handlers/types"
+import { EVENTS } from "@andhivie/common/constants"
+import type { SocketContext } from "@andhivie/socket/handlers/types"
 import {
-  deleteQuizz,
-  getQuizzById,
-  saveQuizz,
-  updateQuizz,
-} from "@razzia/socket/services/config"
-import manager, { emitConfig } from "@razzia/socket/services/manager"
+    deleteQuizz,
+    getQuizzById,
+    saveQuizz,
+    updateQuizz,
+} from "@andhivie/socket/services/config"
+import manager, { emitConfig } from "@andhivie/socket/services/manager"
 
 export const quizzSocketHandlers = ({ socket }: SocketContext) => {
   socket.on(

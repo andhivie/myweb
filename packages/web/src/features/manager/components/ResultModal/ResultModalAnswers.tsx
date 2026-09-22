@@ -1,10 +1,10 @@
-import { MEDIA_TYPES, NO_TIME_LIMIT } from "@razzia/common/constants"
-import type { QuestionMedia } from "@razzia/common/types/game"
-import { useResultModal } from "@razzia/web/features/manager/contexts/result-modal-context"
+import { MEDIA_TYPES, NO_TIME_LIMIT } from "@andhivie/common/constants"
+import type { QuestionMedia } from "@andhivie/common/types/game"
+import { useResultModal } from "@andhivie/web/features/manager/contexts/result-modal-context"
 import {
     ANSWERS_COLORS,
     ANSWERS_LABELS,
-} from "@razzia/web/features/session/utils/constants"
+} from "@andhivie/web/features/session/utils/constants"
 import clsx from "clsx"
 import { Check, Clock, ImageOff, Music, Video, X } from "lucide-react"
 import { useTranslation } from "react-i18next"

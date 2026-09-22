@@ -1,13 +1,13 @@
-import { EVENTS } from "@razzia/common/constants";
-import { STATUS } from "@razzia/common/types/game/status";
-import Button from "@razzia/web/components/ui/Button";
-import Card from "@razzia/web/components/ui/Card";
-import Input from "@razzia/web/components/ui/Input";
+import { EVENTS } from "@andhivie/common/constants";
+import { STATUS } from "@andhivie/common/types/game/status";
+import Button from "@andhivie/web/components/ui/Button";
+import Card from "@andhivie/web/components/ui/Card";
+import Input from "@andhivie/web/components/ui/Input";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
 import { useNavigate } from "@tanstack/react-router";
 import { type KeyboardEvent, useState } from "react";
 

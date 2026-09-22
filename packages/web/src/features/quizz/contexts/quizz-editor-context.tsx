@@ -1,10 +1,10 @@
-import { QUESTION_TYPES } from "@razzia/common/constants"
-import type { Question, QuizzWithId } from "@razzia/common/types/game"
+import { QUESTION_TYPES } from "@andhivie/common/constants"
+import type { Question, QuizzWithId } from "@andhivie/common/types/game"
 import {
-  createContext,
-  useContext,
-  useState,
-  type PropsWithChildren,
+    createContext,
+    useContext,
+    useState,
+    type PropsWithChildren,
 } from "react"
 import { v7 as uuid } from "uuid"
 

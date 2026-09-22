@@ -1,4 +1,4 @@
-import type { Question, QuestionType } from "@razzia/common/types/game"
+import type { Question, QuestionType } from "@andhivie/common/types/game"
 import * as multi from "./multi"
 import * as single from "./single"
 

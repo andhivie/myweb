@@ -1,18 +1,18 @@
-import { MAX_POINTS, NO_TIME_LIMIT } from "@razzia/common/constants"
-import type { ScoringMode } from "@razzia/common/types/game"
+import { MAX_POINTS, NO_TIME_LIMIT } from "@andhivie/common/constants"
+import type { ScoringMode } from "@andhivie/common/types/game"
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@razzia/web/components/ui/Select"
-import Switch from "@razzia/web/components/ui/Switch"
-import { QUESTION_REGISTRY } from "@razzia/web/features/questions"
-import ConfigField from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
-import ConfigNumberInput from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigNumberInput"
-import ConfigSection from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigSection"
-import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+} from "@andhivie/web/components/ui/Select"
+import Switch from "@andhivie/web/components/ui/Switch"
+import { QUESTION_REGISTRY } from "@andhivie/web/features/questions"
+import ConfigField from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
+import ConfigNumberInput from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigNumberInput"
+import ConfigSection from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigSection"
+import { useQuizzEditor } from "@andhivie/web/features/quizz/contexts/quizz-editor-context"
 import { ArrowBigDownDash, Clock, ListChecks, Star, Timer } from "lucide-react"
 import { useTranslation } from "react-i18next"
 

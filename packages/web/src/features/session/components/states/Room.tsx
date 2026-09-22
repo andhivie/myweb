@@ -1,14 +1,14 @@
-import { EVENTS } from "@razzia/common/constants";
-import type { PublicPlayer } from "@razzia/common/types/game";
-import type { ManagerStatusDataMap } from "@razzia/common/types/game/status";
-import { RiveAvatar } from "@razzia/web/components/avatar";
-import AlertDialog from "@razzia/web/components/ui/AlertDialog";
-import Modal from "@razzia/web/components/ui/Modal";
+import { EVENTS } from "@andhivie/common/constants";
+import type { PublicPlayer } from "@andhivie/common/types/game";
+import type { ManagerStatusDataMap } from "@andhivie/common/types/game/status";
+import { RiveAvatar } from "@andhivie/web/components/avatar";
+import AlertDialog from "@andhivie/web/components/ui/AlertDialog";
+import Modal from "@andhivie/web/components/ui/Modal";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { useManagerStore } from "@razzia/web/features/session/stores/manager";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { useManagerStore } from "@andhivie/web/features/session/stores/manager";
 import { QRCodeSVG } from "qrcode.react";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";

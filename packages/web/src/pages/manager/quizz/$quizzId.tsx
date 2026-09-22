@@ -1,14 +1,14 @@
-import { EVENTS } from "@razzia/common/constants"
-import type { QuizzWithId } from "@razzia/common/types/game"
-import Loader from "@razzia/web/components/ui/Loader"
-import QuestionEditor from "@razzia/web/features/quizz/components/QuestionEditor"
-import QuizzEditorHeader from "@razzia/web/features/quizz/components/QuizzEditorHeader"
-import QuizzEditorSidebar from "@razzia/web/features/quizz/components/QuizzEditorSidebar"
-import { QuizzEditorProvider } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+import { EVENTS } from "@andhivie/common/constants"
+import type { QuizzWithId } from "@andhivie/common/types/game"
+import Loader from "@andhivie/web/components/ui/Loader"
+import QuestionEditor from "@andhivie/web/features/quizz/components/QuestionEditor"
+import QuizzEditorHeader from "@andhivie/web/features/quizz/components/QuizzEditorHeader"
+import QuizzEditorSidebar from "@andhivie/web/features/quizz/components/QuizzEditorSidebar"
+import { QuizzEditorProvider } from "@andhivie/web/features/quizz/contexts/quizz-editor-context"
 import {
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
+} from "@andhivie/web/features/session/contexts/socket-context"
 import { createFileRoute } from "@tanstack/react-router"
 import { useEffect, useState } from "react"
 

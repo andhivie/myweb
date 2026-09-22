@@ -1,8 +1,8 @@
-import type { CommonStatusDataMap } from "@razzia/common/types/game/status";
+import type { CommonStatusDataMap } from "@andhivie/common/types/game/status";
 import {
-  ANSWERS_COLORS,
-  ANSWERS_LABELS,
-} from "@razzia/web/features/session/utils/constants";
+    ANSWERS_COLORS,
+    ANSWERS_LABELS,
+} from "@andhivie/web/features/session/utils/constants";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 

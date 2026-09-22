@@ -1,9 +1,9 @@
-import ErrorPage from "@razzia/web/components/layout/ErrorPage";
-import NotFound from "@razzia/web/components/layout/NotFound";
+import ErrorPage from "@andhivie/web/components/layout/ErrorPage";
+import NotFound from "@andhivie/web/components/layout/NotFound";
 import {
-  SocketProvider,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
+    SocketProvider,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { useEffect } from "react";
 

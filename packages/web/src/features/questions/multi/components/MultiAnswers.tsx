@@ -1,6 +1,6 @@
-import { AnswerOption } from "@razzia/web/components/quiz";
-import Button from "@razzia/web/components/ui/Button";
-import type { AnswerComponentProps } from "@razzia/web/features/questions/types";
+import { AnswerOption } from "@andhivie/web/components/quiz";
+import Button from "@andhivie/web/components/ui/Button";
+import type { AnswerComponentProps } from "@andhivie/web/features/questions/types";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 

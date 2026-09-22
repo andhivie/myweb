@@ -1,24 +1,24 @@
 // oxlint-disable typescript/no-unnecessary-condition
-import { EVENTS, MEDIA_TYPES, NO_TIME_LIMIT } from "@razzia/common/constants"
+import { EVENTS, MEDIA_TYPES, NO_TIME_LIMIT } from "@andhivie/common/constants"
 import type {
-  Answer,
-  GameResult,
-  Player,
-  Question,
-  QuestionResult,
-  Quizz,
-} from "@razzia/common/types/game"
-import type { Server, Socket } from "@razzia/common/types/game/socket"
+    Answer,
+    GameResult,
+    Player,
+    Question,
+    QuestionResult,
+    Quizz,
+} from "@andhivie/common/types/game"
+import type { Server, Socket } from "@andhivie/common/types/game/socket"
 import {
-  type Status,
-  STATUS,
-  type StatusDataMap,
-} from "@razzia/common/types/game/status"
-import { CooldownTimer } from "@razzia/socket/services/game/cooldown-timer"
-import { PlayerManager } from "@razzia/socket/services/game/player-manager"
-import { QUESTION_SCORING } from "@razzia/socket/services/scoring"
-import { orderToPoint, timeToPoint } from "@razzia/socket/utils/game"
-import sleep from "@razzia/socket/utils/sleep"
+    type Status,
+    STATUS,
+    type StatusDataMap,
+} from "@andhivie/common/types/game/status"
+import { CooldownTimer } from "@andhivie/socket/services/game/cooldown-timer"
+import { PlayerManager } from "@andhivie/socket/services/game/player-manager"
+import { QUESTION_SCORING } from "@andhivie/socket/services/scoring"
+import { orderToPoint, timeToPoint } from "@andhivie/socket/utils/game"
+import sleep from "@andhivie/socket/utils/sleep"
 import { nanoid } from "nanoid"
 
 type BroadcastFn = <T extends Status>(

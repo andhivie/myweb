@@ -1,12 +1,12 @@
-import { EVENTS } from "@razzia/common/constants";
-import Button from "@razzia/web/components/ui/Button";
-import Card from "@razzia/web/components/ui/Card";
+import { EVENTS } from "@andhivie/common/constants";
+import Button from "@andhivie/web/components/ui/Button";
+import Card from "@andhivie/web/components/ui/Card";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
-import { useQuestionStore } from "@razzia/web/features/session/stores/question";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
+import { useQuestionStore } from "@andhivie/web/features/session/stores/question";
 import { useNavigate } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";

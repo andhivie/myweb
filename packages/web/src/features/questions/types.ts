@@ -1,4 +1,4 @@
-import type { QuestionOptions } from "@razzia/common/types/game"
+import type { QuestionOptions } from "@andhivie/common/types/game"
 
 export interface AnswerComponentProps {
   answers: string[]

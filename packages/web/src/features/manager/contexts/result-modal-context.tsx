@@ -1,9 +1,9 @@
-import type { GameResult, QuestionResult } from "@razzia/common/types/game"
+import type { GameResult, QuestionResult } from "@andhivie/common/types/game"
 import {
-  createContext,
-  useContext,
-  useState,
-  type PropsWithChildren,
+    createContext,
+    useContext,
+    useState,
+    type PropsWithChildren,
 } from "react"
 
 interface ResultModalContextType {

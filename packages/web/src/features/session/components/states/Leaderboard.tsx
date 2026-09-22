@@ -1,4 +1,4 @@
-import type { ManagerStatusDataMap } from "@razzia/common/types/game/status";
+import type { ManagerStatusDataMap } from "@andhivie/common/types/game/status";
 import clsx from "clsx";
 import { AnimatePresence, motion, useSpring, useTransform } from "motion/react";
 import { useEffect, useState } from "react";

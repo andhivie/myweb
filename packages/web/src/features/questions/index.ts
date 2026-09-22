@@ -1,14 +1,14 @@
 import type {
-  QuestionOptions,
-  QuestionType,
-  ScoringMode,
-} from "@razzia/common/types/game"
-import * as multi from "@razzia/web/features/questions/multi"
-import * as single from "@razzia/web/features/questions/single"
+    QuestionOptions,
+    QuestionType,
+    ScoringMode,
+} from "@andhivie/common/types/game"
+import * as multi from "@andhivie/web/features/questions/multi"
+import * as single from "@andhivie/web/features/questions/single"
 import type {
-  AnswerComponentProps,
-  SolutionPickerProps,
-} from "@razzia/web/features/questions/types"
+    AnswerComponentProps,
+    SolutionPickerProps,
+} from "@andhivie/web/features/questions/types"
 import type { ComponentType } from "react"
 
 interface QuestionRegistryEntry {

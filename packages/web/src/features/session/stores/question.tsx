@@ -1,4 +1,4 @@
-import type { GameUpdateQuestion } from "@razzia/common/types/game"
+import type { GameUpdateQuestion } from "@andhivie/common/types/game"
 import { create } from "zustand"
 
 interface QuestionStore {

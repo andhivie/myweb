@@ -1,15 +1,15 @@
-import { EVENTS } from "@razzia/common/constants";
-import type { Status } from "@razzia/common/types/game/status";
-import GameBackground from "@razzia/web/components/quiz/GameBackground";
-import Button from "@razzia/web/components/ui/Button";
-import Loader from "@razzia/web/components/ui/Loader";
+import { EVENTS } from "@andhivie/common/constants";
+import type { Status } from "@andhivie/common/types/game/status";
+import GameBackground from "@andhivie/web/components/quiz/GameBackground";
+import Button from "@andhivie/web/components/ui/Button";
+import Loader from "@andhivie/web/components/ui/Loader";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
-import { useQuestionStore } from "@razzia/web/features/session/stores/question";
-import { MANAGER_SKIP_BTN } from "@razzia/web/features/session/utils/constants";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
+import { useQuestionStore } from "@andhivie/web/features/session/stores/question";
+import { MANAGER_SKIP_BTN } from "@andhivie/web/features/session/utils/constants";
 import clsx from "clsx";
 import { type PropsWithChildren, useEffect, useState } from "react";
 import toast from "react-hot-toast";

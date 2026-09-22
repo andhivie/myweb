@@ -1,16 +1,16 @@
-import { EVENTS } from "@razzia/common/constants"
-import GameWrapper from "@razzia/web/features/session/components/GameWrapper"
+import { EVENTS } from "@andhivie/common/constants"
+import GameWrapper from "@andhivie/web/features/session/components/GameWrapper"
 import {
     socketClient,
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
-import { usePlayerStore } from "@razzia/web/features/session/stores/player"
-import { useQuestionStore } from "@razzia/web/features/session/stores/question"
+} from "@andhivie/web/features/session/contexts/socket-context"
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player"
+import { useQuestionStore } from "@andhivie/web/features/session/stores/question"
 import {
     GAME_STATE_COMPONENTS,
     isKeyOf,
-} from "@razzia/web/features/session/utils/constants"
+} from "@andhivie/web/features/session/utils/constants"
 import { createFileRoute, useNavigate, useParams } from "@tanstack/react-router"
 import toast from "react-hot-toast"
 import { useTranslation } from "react-i18next"

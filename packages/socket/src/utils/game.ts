@@ -1,8 +1,8 @@
-import { MAX_POINTS } from "@razzia/common/constants"
-import type { Question } from "@razzia/common/types/game"
-import type { Socket } from "@razzia/common/types/game/socket"
-import Game from "@razzia/socket/services/game"
-import Registry from "@razzia/socket/services/registry"
+import { MAX_POINTS } from "@andhivie/common/constants"
+import type { Question } from "@andhivie/common/types/game"
+import type { Socket } from "@andhivie/common/types/game/socket"
+import Game from "@andhivie/socket/services/game"
+import Registry from "@andhivie/socket/services/registry"
 import { nanoid } from "nanoid"
 
 export const withGame = (

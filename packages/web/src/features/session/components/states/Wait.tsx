@@ -1,13 +1,13 @@
-import { EVENTS } from "@razzia/common/constants";
-import type { PublicPlayer } from "@razzia/common/types/game";
-import type { PlayerStatusDataMap } from "@razzia/common/types/game/status";
-import { RiveAvatar } from "@razzia/web/components/avatar";
-import Loader from "@razzia/web/components/ui/Loader";
+import { EVENTS } from "@andhivie/common/constants";
+import type { PublicPlayer } from "@andhivie/common/types/game";
+import type { PlayerStatusDataMap } from "@andhivie/common/types/game/status";
+import { RiveAvatar } from "@andhivie/web/components/avatar";
+import Loader from "@andhivie/web/components/ui/Loader";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";

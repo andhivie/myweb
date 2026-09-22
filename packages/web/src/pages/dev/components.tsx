@@ -1,12 +1,12 @@
 import {
-  AnswerOption,
-  LeaderboardItem,
-  ProgressBar,
-  Timer,
-} from "@razzia/web/components/quiz";
-import Badge from "@razzia/web/components/ui/Badge";
-import Button from "@razzia/web/components/ui/Button";
-import Card from "@razzia/web/components/ui/Card";
+    AnswerOption,
+    LeaderboardItem,
+    ProgressBar,
+    Timer,
+} from "@andhivie/web/components/quiz";
+import Badge from "@andhivie/web/components/ui/Badge";
+import Button from "@andhivie/web/components/ui/Button";
+import Card from "@andhivie/web/components/ui/Card";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 

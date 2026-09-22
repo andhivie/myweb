@@ -1,8 +1,8 @@
 import {
-  MEDIA_TYPES,
-  QUESTION_TYPES,
-  SCORING_MODES,
-} from "@razzia/common/constants"
+    MEDIA_TYPES,
+    QUESTION_TYPES,
+    SCORING_MODES,
+} from "@andhivie/common/constants"
 import { z } from "zod"
 
 export const questionMediaValidator = z.object({

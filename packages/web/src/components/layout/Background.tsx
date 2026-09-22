@@ -1,6 +1,6 @@
-import defaultLogo from "@razzia/web/assets/logo.svg";
-import { getBranding, imageFallback } from "@razzia/web/branding";
-import GithubIcon from "@razzia/web/components/layout/GithubIcon";
+import defaultLogo from "@andhivie/web/assets/logo.svg";
+import { getBranding, imageFallback } from "@andhivie/web/branding";
+import GithubIcon from "@andhivie/web/components/layout/GithubIcon";
 import type { PropsWithChildren } from "react";
 
 const Background = ({ children }: PropsWithChildren) => {
@@ -25,7 +25,7 @@ const Background = ({ children }: PropsWithChildren) => {
       {children}
 
       <a
-        href="https://github.com/Ralex91/Razzia"
+        href="https://github.com/andhivie/myweb"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-1.5 text-sm font-semibold text-white/50 transition-colors hover:text-white/80"

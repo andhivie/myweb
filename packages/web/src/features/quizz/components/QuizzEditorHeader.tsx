@@ -1,11 +1,11 @@
-import { EVENTS } from "@razzia/common/constants"
-import Button from "@razzia/web/components/ui/Button"
-import Input from "@razzia/web/components/ui/Input"
-import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+import { EVENTS } from "@andhivie/common/constants"
+import Button from "@andhivie/web/components/ui/Button"
+import Input from "@andhivie/web/components/ui/Input"
+import { useQuizzEditor } from "@andhivie/web/features/quizz/contexts/quizz-editor-context"
 import {
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
+} from "@andhivie/web/features/session/contexts/socket-context"
 import { useNavigate } from "@tanstack/react-router"
 import type { ChangeEvent } from "react"
 import toast from "react-hot-toast"

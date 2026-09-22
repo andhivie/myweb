@@ -1,13 +1,13 @@
 import type {
-  ClientToServerEvents,
-  ServerToClientEvents,
-} from "@razzia/common/types/game/socket"
+    ClientToServerEvents,
+    ServerToClientEvents,
+} from "@andhivie/common/types/game/socket"
 import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
+    createContext,
+    useCallback,
+    useContext,
+    useEffect,
+    useState,
 } from "react"
 import { io, Socket } from "socket.io-client"
 import { v7 as uuid } from "uuid"

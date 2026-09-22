@@ -1,7 +1,7 @@
-import { EVENTS } from "@razzia/common/constants"
-import type { SocketContext } from "@razzia/socket/handlers/types"
-import { deleteResult, getResultById } from "@razzia/socket/services/config"
-import manager, { emitConfig } from "@razzia/socket/services/manager"
+import { EVENTS } from "@andhivie/common/constants"
+import type { SocketContext } from "@andhivie/socket/handlers/types"
+import { deleteResult, getResultById } from "@andhivie/socket/services/config"
+import manager, { emitConfig } from "@andhivie/socket/services/manager"
 
 export const resultsSocketHandlers = ({ socket }: SocketContext) => {
   socket.on(

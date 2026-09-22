@@ -1,6 +1,6 @@
-import { MEDIA_TYPES } from "@razzia/common/constants";
-import type { CommonStatusDataMap } from "@razzia/common/types/game/status";
-import { SFX } from "@razzia/web/features/session/utils/constants";
+import { MEDIA_TYPES } from "@andhivie/common/constants";
+import type { CommonStatusDataMap } from "@andhivie/common/types/game/status";
+import { SFX } from "@andhivie/web/features/session/utils/constants";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
 

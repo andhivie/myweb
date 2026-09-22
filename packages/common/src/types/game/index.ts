@@ -1,8 +1,8 @@
 import type {
-  MEDIA_TYPES,
-  QUESTION_TYPES,
-  SCORING_MODES,
-} from "@razzia/common/constants"
+    MEDIA_TYPES,
+    QUESTION_TYPES,
+    SCORING_MODES,
+} from "@andhivie/common/constants"
 
 export type QuestionType = (typeof QUESTION_TYPES)[keyof typeof QUESTION_TYPES]
 

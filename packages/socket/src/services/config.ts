@@ -1,11 +1,11 @@
-import { EXAMPLE_QUIZZ } from "@razzia/common/constants"
+import { EXAMPLE_QUIZZ } from "@andhivie/common/constants"
 import type {
-  GameResult,
-  GameResultMeta,
-  QuizzWithId,
-} from "@razzia/common/types/game"
-import { quizzValidator } from "@razzia/common/validators/quizz"
-import { normalizeFilename } from "@razzia/socket/utils/game"
+    GameResult,
+    GameResultMeta,
+    QuizzWithId,
+} from "@andhivie/common/types/game"
+import { quizzValidator } from "@andhivie/common/validators/quizz"
+import { normalizeFilename } from "@andhivie/socket/utils/game"
 import fs from "fs"
 import { nanoid } from "nanoid"
 import { join, resolve } from "path"

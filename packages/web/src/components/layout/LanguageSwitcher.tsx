@@ -4,7 +4,7 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@razzia/web/components/ui/Select"
+} from "@andhivie/web/components/ui/Select"
 import { Globe } from "lucide-react"
 import { useTranslation } from "react-i18next"
 

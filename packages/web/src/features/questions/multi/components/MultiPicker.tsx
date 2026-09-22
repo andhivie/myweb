@@ -1,5 +1,5 @@
-import type { SolutionPickerProps } from "@razzia/web/features/questions/types"
-import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+import type { SolutionPickerProps } from "@andhivie/web/features/questions/types"
+import { useQuizzEditor } from "@andhivie/web/features/quizz/contexts/quizz-editor-context"
 import clsx from "clsx"
 import { Check } from "lucide-react"
 

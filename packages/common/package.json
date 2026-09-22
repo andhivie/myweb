@@ -1,5 +1,5 @@
 {
-  "name": "@razzia/common",
+  "name": "@andhivie/common",
   "type": "module",
   "dependencies": {
     "socket.io": "^4.8.3",

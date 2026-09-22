@@ -1,17 +1,17 @@
-import type { QuestionType } from "@razzia/common/types/game"
+import type { QuestionType } from "@andhivie/common/types/game"
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@razzia/web/components/ui/Select"
+} from "@andhivie/web/components/ui/Select"
 import {
     QUESTION_REGISTRY,
     QUESTION_TYPE_LIST,
-} from "@razzia/web/features/questions"
-import ConfigField from "@razzia/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
-import { useQuizzEditor } from "@razzia/web/features/quizz/contexts/quizz-editor-context"
+} from "@andhivie/web/features/questions"
+import ConfigField from "@andhivie/web/features/quizz/components/QuestionEditor/QuestionEditorConfig/ConfigField"
+import { useQuizzEditor } from "@andhivie/web/features/quizz/contexts/quizz-editor-context"
 import { LayoutList } from "lucide-react"
 import { useTranslation } from "react-i18next"
 

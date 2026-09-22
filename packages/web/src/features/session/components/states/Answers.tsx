@@ -1,15 +1,15 @@
-import { EVENTS, MEDIA_TYPES, NO_TIME_LIMIT } from "@razzia/common/constants";
-import type { QuestionMediaType } from "@razzia/common/types/game";
-import type { CommonStatusDataMap } from "@razzia/common/types/game/status";
-import QuestionMedia from "@razzia/web/components/quiz/QuestionMedia";
-import Timer from "@razzia/web/components/quiz/Timer";
-import { QUESTION_REGISTRY } from "@razzia/web/features/questions";
+import { EVENTS, MEDIA_TYPES, NO_TIME_LIMIT } from "@andhivie/common/constants";
+import type { QuestionMediaType } from "@andhivie/common/types/game";
+import type { CommonStatusDataMap } from "@andhivie/common/types/game/status";
+import QuestionMedia from "@andhivie/web/components/quiz/QuestionMedia";
+import Timer from "@andhivie/web/components/quiz/Timer";
+import { QUESTION_REGISTRY } from "@andhivie/web/features/questions";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
-import { SFX } from "@razzia/web/features/session/utils/constants";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
+import { SFX } from "@andhivie/web/features/session/utils/constants";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";

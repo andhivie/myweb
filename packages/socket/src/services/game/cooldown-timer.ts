@@ -1,5 +1,5 @@
-import { EVENTS, NO_TIME_LIMIT } from "@razzia/common/constants"
-import type { Server } from "@razzia/common/types/game/socket"
+import { EVENTS, NO_TIME_LIMIT } from "@andhivie/common/constants"
+import type { Server } from "@andhivie/common/types/game/socket"
 
 export class CooldownTimer {
   private readonly io: Server

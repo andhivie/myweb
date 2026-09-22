@@ -1,12 +1,12 @@
-import { EVENTS } from "@razzia/common/constants";
-import PinInput from "@razzia/web/components/quiz/PinInput";
-import Button from "@razzia/web/components/ui/Button";
-import Card from "@razzia/web/components/ui/Card";
+import { EVENTS } from "@andhivie/common/constants";
+import PinInput from "@andhivie/web/components/quiz/PinInput";
+import Button from "@andhivie/web/components/ui/Button";
+import Card from "@andhivie/web/components/ui/Card";
 import {
-  useEvent,
-  useSocket,
-} from "@razzia/web/features/session/contexts/socket-context";
-import { usePlayerStore } from "@razzia/web/features/session/stores/player";
+    useEvent,
+    useSocket,
+} from "@andhivie/web/features/session/contexts/socket-context";
+import { usePlayerStore } from "@andhivie/web/features/session/stores/player";
 import { useSearch } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";

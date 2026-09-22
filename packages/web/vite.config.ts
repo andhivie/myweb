@@ -80,11 +80,11 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@razzia/web": fileURLToPath(new URL("./src", import.meta.url)),
-      "@razzia/common": fileURLToPath(
+      "@andhivie/web": fileURLToPath(new URL("./src", import.meta.url)),
+      "@andhivie/common": fileURLToPath(
         new URL("../common/src", import.meta.url),
       ),
-      "@razzia/socket": fileURLToPath(
+      "@andhivie/socket": fileURLToPath(
         new URL("../socket/src", import.meta.url),
       ),
     },

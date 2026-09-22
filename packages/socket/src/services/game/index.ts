@@ -1,18 +1,18 @@
-import { EVENTS } from "@razzia/common/constants"
-import type { Player, Quizz } from "@razzia/common/types/game"
-import type { Server, Socket } from "@razzia/common/types/game/socket"
+import { EVENTS } from "@andhivie/common/constants"
+import type { Player, Quizz } from "@andhivie/common/types/game"
+import type { Server, Socket } from "@andhivie/common/types/game/socket"
 import {
-  STATUS,
-  type Status,
-  type StatusDataMap,
-} from "@razzia/common/types/game/status"
-import { saveResult } from "@razzia/socket/services/config"
-import { CooldownTimer } from "@razzia/socket/services/game/cooldown-timer"
-import { PlayerManager } from "@razzia/socket/services/game/player-manager"
-import { RoundManager } from "@razzia/socket/services/game/round-manager"
-import Registry from "@razzia/socket/services/registry"
-import { createInviteCode } from "@razzia/socket/utils/game"
-import { getClientId } from "@razzia/socket/utils/socket"
+    STATUS,
+    type Status,
+    type StatusDataMap,
+} from "@andhivie/common/types/game/status"
+import { saveResult } from "@andhivie/socket/services/config"
+import { CooldownTimer } from "@andhivie/socket/services/game/cooldown-timer"
+import { PlayerManager } from "@andhivie/socket/services/game/player-manager"
+import { RoundManager } from "@andhivie/socket/services/game/round-manager"
+import Registry from "@andhivie/socket/services/registry"
+import { createInviteCode } from "@andhivie/socket/utils/game"
+import { getClientId } from "@andhivie/socket/utils/socket"
 import { v7 as uuid } from "uuid"
 
 const registry = Registry.getInstance()

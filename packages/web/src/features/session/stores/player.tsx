@@ -1,8 +1,8 @@
-import type { StatusDataMap } from "@razzia/common/types/game/status"
+import type { StatusDataMap } from "@andhivie/common/types/game/status"
 import {
     createStatus,
     type Status,
-} from "@razzia/web/features/session/utils/createStatus"
+} from "@andhivie/web/features/session/utils/createStatus"
 import { create } from "zustand"
 
 interface PlayerState {

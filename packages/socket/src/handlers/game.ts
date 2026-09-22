@@ -1,12 +1,12 @@
-import { EVENTS } from "@razzia/common/constants"
-import { inviteCodeValidator } from "@razzia/common/validators/auth"
-import type { SocketContext } from "@razzia/socket/handlers/types"
-import { getQuizz } from "@razzia/socket/services/config"
-import Game from "@razzia/socket/services/game"
-import manager from "@razzia/socket/services/manager"
-import Registry from "@razzia/socket/services/registry"
-import { withGame } from "@razzia/socket/utils/game"
-import { getClientId } from "@razzia/socket/utils/socket"
+import { EVENTS } from "@andhivie/common/constants"
+import { inviteCodeValidator } from "@andhivie/common/validators/auth"
+import type { SocketContext } from "@andhivie/socket/handlers/types"
+import { getQuizz } from "@andhivie/socket/services/config"
+import Game from "@andhivie/socket/services/game"
+import manager from "@andhivie/socket/services/manager"
+import Registry from "@andhivie/socket/services/registry"
+import { withGame } from "@andhivie/socket/utils/game"
+import { getClientId } from "@andhivie/socket/utils/socket"
 
 export const gameSocketHandlers = ({ io, socket }: SocketContext) => {
   const registry = Registry.getInstance()

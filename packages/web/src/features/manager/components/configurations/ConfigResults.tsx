@@ -1,12 +1,12 @@
-import { EVENTS } from "@razzia/common/constants"
-import type { GameResult } from "@razzia/common/types/game"
-import AlertDialog from "@razzia/web/components/ui/AlertDialog"
-import ResultModal from "@razzia/web/features/manager/components/ResultModal"
-import { useConfig } from "@razzia/web/features/manager/contexts/config-context"
+import { EVENTS } from "@andhivie/common/constants"
+import type { GameResult } from "@andhivie/common/types/game"
+import AlertDialog from "@andhivie/web/components/ui/AlertDialog"
+import ResultModal from "@andhivie/web/features/manager/components/ResultModal"
+import { useConfig } from "@andhivie/web/features/manager/contexts/config-context"
 import {
     useEvent,
     useSocket,
-} from "@razzia/web/features/session/contexts/socket-context"
+} from "@andhivie/web/features/session/contexts/socket-context"
 import { Trash2 } from "lucide-react"
 import { useCallback, useState } from "react"
 import toast from "react-hot-toast"
